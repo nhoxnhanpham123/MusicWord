@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chúng Ta Không Thuộc Về Nhau</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <style>
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "20%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+<style>
+.navbar-inverse{	background-color:#039;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#id01{
+	z-index:9999;
+}
+#id01 input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#nut button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	border-radius:5px;
+}
+
+#nut button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+	color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+	border-radius:5px;
+}
+.cancelbtn:hover{
+	opacity:0.8;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "20%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+</head>
+<body>
+<body>
+<nav class="nav navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" onClick="openNav();">&#9776; MyMusic</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="../btgrojec.html">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Kind Of Music <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+               
+          <li><a href="../the loai nhac/rock.html">ROCK</a></li>
+          <li><a href="../the loai nhac/POP/POP/pop.html">POP</a></li>
+          <li><a href="../the loai nhac/r and b.html">R&B/Soul </a></li>
+          <li><a href="../the loai nhac/Rap/Rap/rap.html">Rap</a></li>
+          <li><a href="../the loai nhac/Album dance/Album dance/dance.html">Dance</a></li>
+
+        </ul>
+      </li> 
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Singer<span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="../sơn tùng/page chính.html">Sơn Tùng</a></li>
+            <li><a href="../Phan Đình Tùng/HomePage.html">Phan Đình Tùng</a></li>
+            <li><a href="../Justatee/homepage.html">Justatee</a></li>
+            <li><a href="../Sĩ Luân/page chính sĩ luân.html">Sĩ Luân</a></li>
+            <li><a href="../Sobin Hoàng Sơn/HomePage.html">SooBin Hoàng Sơn</a></li>
+            <li><a href="../Binz/page chính binz.html">Binz</a></li>
+            <li><a  href="../Karik/HomePage.html">Karik</a></li>
+            <li><a href="../vu/homepage.html">Vũ</a></li>
+            <li><a href="../Vũ Cát Tường/page chính vũ cát tường.html">Vũ Cát Tường</a></li>
+    </ul>
+    </li>
+    </ul>
+ <form class="navbar-form navbar-left">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit" style="height:33.7px;">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </div>
+</form>
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="../SignUp.html"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+   <li><a href="#" onclick="document.getElementById('id01').style.display='block'"><span class="glyphicon glyphicon-log-in"> Log-in</span></a></li>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../avatar-female-icon-design-vector-png_118679 (1).jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container" id="nut">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+    </ul>
+  </div>
+</nav>
+    
+    
+<div class="container">
+  <h2 style="text-align:center">CHÚNG TA KHÔNG THUỘC VỀ NHAU</h2>          
+  <img src="hình ảnh/maxresdefault.jpg" class="img-circle" alt="Cinque Terre" width="450" height="300"> 
+		<audio id="myAudio" controls>
+              <source src="nhạc/ChungTaKhongThuocVeNhau-SonTungMTP-4528181.mp3" type="audio/ogg">
+              <source src="nhạc/ChungTaKhongThuocVeNhau-SonTungMTP-4528181.mp3" type="audio/mpeg">
+            </audio> 
+            &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-download-alt"></span>
+         <div class="row">
+         <div class="col-sm-7">
+       
+ <form>
+  <textarea name="message" rows="15" cols="110">Niềm tin đã mất, giọt nước mắt cuốn kí ức anh chìm sâu 
+Tình về nơi đâu, cô đơn đôi chân lạc trôi giữa bầu trời 
+Màn đêm che giấu, từng góc tối khuất lấp phía sau bờ môi! 
+Tại vì anh thôi, yêu say mê nên đôi khi quá dại khờ! 
+
+Nhắm mắt ơ thờ anh không muốn lạc vào trong nỗi đau này 
+Phía trước bây giờ ai đang nắm chặt bàn tay của em vậy ... 
+Ai vậy ??? 
+Mông lung như một trò đùa 
+Anh xin giơ tay rút lui thôi 
+Do ai ??? 
+Trách ai bây giờ đây ???? 
+Uhhhhhh .... 
+
+Chúng ta không thuộc về nhau 
+Chúng ta không thuộc về nhau 
+Chúng ta không thuộc về nhau 
+Em hãy cứ đi bên người mà em cần 
+Trái tim không thuộc về nhau 
+Giấc mơ không là của nhau 
+Xoá câu ca buồn chiều mưa 
+Anh lỡ xoá luôn yêu thương ngày xưa rồi 
+Chúng ta không thuộc về nhau 
+
+Hey... Từng đêm qua ... 
+Cơn mưa bao vây chia rời đôi ta 
+Em ... Ngày hôm qua ... 
+Cuốn gió theo mây đi về nơi xa 
+Trời xanh rộng bao la 
+Anh lê đôi chân mình, 
+Bơ vơ lang thang có lẽ 
+Em đang yên vui bên nhân tình 
+Quên đi để anh nhớ 
+Hơi men để anh mơ 
+Nơi đâu để anh giấu 
+Một nỗi buồn vào trong thơ 
+
+Nhắm mắt ơ thờ anh không muốn lạc vào trong nỗi đau này 
+Phía trước bây giờ ai đang nắm chặt bàn tay của em vậy 
+Mông lung như một trò đùa 
+Anh xin giơ tay rút lui thôi 
+Do ai ??? 
+Trách ai bây giờ đây ???? 
+Uhhhhhh .... 
+
+Chúng ta không thuộc về nhau 
+Chúng ta không thuộc về nhau 
+Chúng ta không thuộc về nhau 
+Em hãy cứ đi bên người mà em cần 
+Trái tim không thuộc về nhau 
+Giấc mơ không là của nhau 
+Xoá câu ca buồn chiều mưa 
+Anh lỡ xoá luôn yêu thương ngày xưa rồi 
+Chúng ta không thuộc về nhau 
+
+Chúng ta không thuộc về nhau 
+Không thuộc về nhau ... Không thuộc về nhau ... 
+Chúng ta không thuộc về nhau 
+Không thuộc về nhau ... Không thuộc về nhau ... 
+
+Chúng ta không thuộc về nhau 
+Chúng ta không thuộc về nhau 
+Chúng ta không thuộc về nhau 
+Em hãy cứ đi bên người mà em cần 
+Trái tim không thuộc về nhau 
+Giấc mơ không là của nhau 
+Xoá câu ca buồn chiều mưa 
+Anh lỡ xoá luôn yêu thương ngày xưa rồi 
+Chúng ta không thuộc về nhau !!!</textarea>
+ 
+</form></div>
+<div id="right" class="col-sm-5" style="width:auto; height:auto; margin-left:150px;">
+	<table>
+    	<tr>
+            <td><a href="lạc trôi.html"><img src="hình ảnh/1ccc1dc39ccdf737d2a69eecfd5fe6fb.jpg" style="padding-bottom:15px;" height="70" width="70"></a></td>
+            <td><a href="lạc trôi.html">&nbsp;&nbsp;&nbsp;&nbsp;lạc trôi</a> &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-download-alt"></span></td>
+        </tr>
+        <tr>
+       		 <td><a href="không phải dạng vừa đâu.html"><img src="hình ảnh/artworks-000106870877-x0888e-t500x500.jpg" style="padding-bottom:15px;" height="70" width="70"></a></td>
+			<td><a href="không phải dạng vừa đâu.html">&nbsp;&nbsp;&nbsp;&nbsp;Không phải dạng vừa đâu</a> &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-download-alt"></span></td>
+         </tr>
+         <tr>
+         		
+       		 <td><a href="em của ngày hôm qua.html"><img src="hình ảnh/1-1485911-562645727150932-509505901-o-1395574342813-crop1395720300457p.jpg" style="padding-bottom:15px;" height="70" width="70"></a></td>
+			<td><a href="em của ngày hôm qua.html">&nbsp;&nbsp;&nbsp;&nbsp;Em của ngày hôm qua	</a> &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-download-alt"></span></td>
+            </tr>
+            </table>
+            </div>
+            </div>
+           
+           
+  
+ <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="../contact.html">Contact</a>
+  </div>
+</div>
+
+</body>
+</html>

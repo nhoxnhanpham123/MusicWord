@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Băng Khuâng</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <style>
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "20%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+<style>
+.navbar-inverse{	background-color:#039;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#id01{
+	z-index:9999;
+}
+#id01 input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#nut button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	border-radius:5px;
+}
+
+#nut button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+	color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+	border-radius:5px;
+}
+.cancelbtn:hover{
+	opacity:0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "20%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+</head>
+<body>
+<body>
+<nav class="nav navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" onClick="openNav();">&#9776; MyMusic</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="../btgrojec.html">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Kind Of Music <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="../the loai nhac/rock.html">ROCK</a></li>
+          <li><a href="../the loai nhac/POP/POP/pop.html">POP</a></li>
+          <li><a href="../the loai nhac/r and b.html">R&B/Soul </a></li>
+          <li><a href="../the loai nhac/Rap/Rap/rap.html">Rap</a></li>
+          <li><a href="../the loai nhac/Album dance/Album dance/dance.html">Dance</a></li>
+        </ul>
+      </li> 
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Singer<span class="caret"></span></a>
+     <ul class="dropdown-menu">
+   <li><a href="../sơn tùng/page chính.html">Sơn Tùng</a></li>
+            <li><a href="../Phan Đình Tùng/HomePage.html">Phan Đình Tùng</a></li>
+            <li><a href="../Justatee/homepage.html">Justatee</a></li>
+            <li><a href="../Sĩ Luân/page chính sĩ luân.html">Sĩ Luân</a></li>
+            <li><a href="../Sobin Hoàng Sơn/HomePage.html">SooBin Hoàng Sơn</a></li>
+            <li><a href="../Binz/page chính binz.html">Binz</a></li>
+            <li><a href="../Karik/HomePage.html">Karik</a></li>
+            <li><a href="../vu/homepage.html">Vũ</a></li>
+            <li><a href="../Vũ Cát Tường/page chính vũ cát tường.html">Vũ Cát Tường</a></li>
+    </ul>
+    </li>
+    </ul>
+ <form class="navbar-form navbar-left">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit" style="height:33.7px;">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </div>
+</form>
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="../SignUp.html"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+   <li><a href="#" onclick="document.getElementById('id01').style.display='block'"><span class="glyphicon glyphicon-log-in"> Log-in</span></a></li>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../avatar-female-icon-design-vector-png_118679 (1).jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container" id="nut">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+    </ul>
+  </div>
+</nav>
+    
+    
+<div class="container">
+  <h2 style="text-align:center">BÂNG KHUÂNG</h2>          
+  <img src="hình ảnh/d725d8a6616c05c932fbe047c15baa59_1397467708.jpg" class="img-circle" alt="Cinque Terre" width="450" height="300"> 
+		<audio id="myAudio" controls>
+              <source src="nhạc/Bang-Khuang-JustaTee.mp3" type="audio/ogg">
+              <source src="nhạc/Bang-Khuang-JustaTee.mp3" type="audio/mpeg">
+            </audio> 
+            &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-download-alt"></span>
+           <div class="row">
+         <div class="col-sm-7">
+ <form>
+  <textarea name="message" rows="15" cols="110">Dừng chân nơi đâu? 
+Từ khi ánh mắt, nhìn nhau chẳng nói được gì 
+Mình từng cùng nhau đi 
+Tìm niềm tin yêu, dù cho nước mắt thấm vào từng 
+Chặng đường dài nơi, em khóc 
+Lặng thầm vương lên mái tóc 
+Phố vắng anh đưa em đi quên bao chuyện buồn 
+Đằng sau dấu vết này em có thấy 
+Càng quên nỗi nhớ càng đầy? 
+Lòng mình sao giấu hết, vào trong hư vô 
+Càng xa ký ức đến càng gần 
+Nhìn đồng hồ trôi đi, anh biết 
+Chẳng còn bên nhau tha thiết 
+Đành mang giấc mơ bấy lâu nay bỏ lại đây 
+
+Vùi chôn hết những phút đắm đuối anh thu mình vào trong căn phòng 
+Nằm nghĩ đến những vết cứa xót xa nơi đặt trọn thương yêu 
+1 giây anh Bâng Khuâng… 
+1 giây anh hứa với lòng mình rằng, sẽ phải quên 
+Mặc cho phía cuối đó có nắng hay mưa dang tay đón lối về 
+Làm sao dấu chấm hết vỡ nát kia sẽ lành lại như xưa? 
+1 giây anh Bâng Khuâng… 
+1 giây anh hứa với lòng mình rằng, sẽ phải quên 
+
+Một giây anh chìm vào cơn mơ, những ngọt bùi ngu ngơ ta đã từng 
+Và một giây anh chạnh lòng bơ vơ, với nụ cười bâng quơ anh sẽ dừng lại 
+Cho em đi tiếp, mình chẳng còn bên nhau tha thiết 
+Đành mang giấc mơ bấy lâu nay bỏ lại đây 
+Đằng sau dấu vết này em có thấy 
+Càng quên nỗi nhớ càng đầy? 
+Lòng mình sao giấu hết, vào trong hư vô 
+Càng xa ký ức đến càng gần 
+Nhìn đồng hồ trôi đi, anh biết 
+Chẳng còn bên nhau tha thiết 
+Vì nơi giấc mơ em bỏ đi chẳng còn anh 
+
+Vùi chôn hết những phút đắm đuối anh thu mình vào trong căn phòng 
+Nằm nghĩ đến những vết cứa xót xa nơi đặt trọn thương yêu 
+1 giây anh Bâng Khuâng… 
+1 giây anh hứa với lòng mình rằng, sẽ phải quên 
+Mặc cho phía cuối đó có nắng hay mưa dang tay đón lối về 
+Làm sao dấu chấm hết vỡ nát kia sẽ lành lại như xưa? 
+1 giây anh Bâng Khuâng… 
+1 giây anh hứa với lòng mình rằng, sẽ phải quên 
+
+Nếu những cố gắng giờ chỉ làm 
+Từng ngày trôi đi vô nghĩa khi em chẳng cần anh phải đổi thay 
+
+Bước chân qua lối về mộng mơ đường xa dài lê thê 
+Biết em chẳng còn gì, dành cho anh 
+Vậy thì để thời gian trôi qua và quên đi 
+Những lỗi lầm anh đã mang đi khi bờ môi em còn ấm áp sau những khó khăn 
+Giờ những hối hận muộn màng, bên cảm xúc đã phai tàn 
+Giờ này chẳng còn lại gì đâu 
+
+Vùi chôn hết những phút đắm đuối anh thu mình vào trong căn phòng 
+Nằm nghĩ đến những vết cứa xót xa nơi đặt trọn thương yêu 
+1 giây anh Bâng Khuâng… 
+1 giây anh hứa với lòng mình rằng, sẽ phải quên 
+Mặc cho phía cuối đó có nắng hay mưa dang tay đón lối về 
+Làm sao dấu chấm hết vỡ nát kia sẽ lành lại như xưa? 
+1 giây anh Bâng Khuâng… 
+1 giây anh nói với lòng mình rằng phải quên đi 
+Em chẳng còn gì đâu.</textarea>
+ 
+</form></div>
+<div id="right" class="col-sm-5" style="width:auto; height:auto; margin-left:150px;">
+	<table>
+    	<tr>
+            <td><a href="thangdien.html"><img src="hình ảnh/d9596f1082e736d59d716010bd2d2fb5.jpg" style="padding-bottom:15px;" height="70" width="70"></a></td>
+            <td><a href="thangdien.html">&nbsp;&nbsp;&nbsp;&nbsp;Thằng điên</a>&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-download-alt"></span></td>
+        </tr>
+        <tr>
+       		 <td><a href="daloyeuemnhieu.html"><img src="hình ảnh/maxresdefault (2).jpg" style="padding-bottom:15px;" height="70" width="70"></a></td>
+			<td><a href="daloyeuemnhieu.html">&nbsp;&nbsp;&nbsp;&nbsp;Đã lỡ yêu em nhiều</a>&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-download-alt"></span></td>
+         </tr>
+         <tr>	
+       		 <td><a href="foreveralone.html"><img src="hình ảnh/fab59cd3bae9d3c5cc847ff13fa244e8_1386239845.jpg" style="padding-bottom:15px;" height="70" width="70"></a></td>
+			<td><a href="foreveralone.html">&nbsp;&nbsp;&nbsp;&nbsp;Forever alone</a>&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-download-alt"></span></td>
+            </tr>
+            </table>
+            </div>
+            </div>        
+           
+      
+ <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="../contact.html">Contact</a>
+  </div>
+</div>
+
+</body>
+</html>

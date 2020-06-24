@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>figure 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+		function check(){
+			var user = formTest.name.value;
+			var pass = formTest.pass.value;
+			var mail = formTest.email.value;
+			var phone = formTest.num.value;
+			var add = formTest.add.value;
+			
+			if(user == ""){
+				alert("Please enter a username");
+				formTest.name.focus();
+				return false;
+			};
+			if(pass == ""){
+				alert("Please enter a password");
+				formTest.pass.focus();
+				return false;
+			};
+			if(mail == ""){
+				alert("Please enter your mail");
+				formTest.email.focus();
+				return false;
+			};
+			if(phone = ""){
+				alert("Please enter your phone");
+				formTest.num.focus();
+				return false;
+			};
+			if(add == ""){
+				alert("Please enter your address");
+				formTest.add.focus();
+				return false;
+			};
+			alert("Congratulations on your success");
+		}
+	</script>
+    
+    
+  <style>
+  #color{
+  	width:1000px;
+	height:auto;
+	background-color:#f1f1f1;
+	z-index:0;
+	padding:15px;
+	border-top:solid;
+	border-bottom:solid;
+	border-left:solid;
+	border-right:solid;
+	position:absolute;
+	left:350px;
+	top:150px;
+  }
+  
+  </style>
+	<style>
+	.navbar-inverse{ background-color:#039;
+	}
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+	input.ng-invalid{
+		background-color:#F63;
+	}
+	#invalid{
+		color:red;
+	}
+</style>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#id01{
+	z-index:9999;
+}
+#id01 input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#nut button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	border-radius:5px;
+}
+
+#nut button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+	color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+	border-radius:5px;
+}
+.cancelbtn:hover{
+	opacity:0.8;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "20%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+</head>
+<body background="am nhac hoa nhac_tu vung tieng trung.jpg" ng-app>
+<nav class="nav navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" onClick="openNav();">&#9776; MyMusic</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="btgrojec.html">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Kind Of Music <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+         <li><a href="the loai nhac/rock.html">ROCK</a></li>
+          <li><a href="the loai nhac/POP/POP/pop.html">POP</a></li>
+          <li><a href="the loai nhac/r and b.html">R&B/Soul </a></li>
+          <li><a href="the loai nhac/Rap/Rap/rap.html">Rap</a></li>
+          <li><a href="the loai nhac/Album dance/Album dance/dance.html">Dance</a></li>
+        </ul>
+      </li> 
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Singer<span class="caret"></span></a>
+     <ul class="dropdown-menu">
+     <li><a href="sơn tùng/page chính.html">Sơn Tùng</a></li>
+            <li><a href="Phan Đình Tùng/HomePage.html">Phan Đình Tùng</a></li>
+            <li><a href="Justatee/homepage.html">Justatee</a></li>
+            <li><a href="Sĩ Luân/page chính sĩ luân.html">Sĩ Luân</a></li>
+            <li><a href="Sobin Hoàng Sơn/HomePage.html">SooBin Hoàng Sơn</a></li>
+            <li><a href="Binz/page chính binz.html">Binz</a></li>
+            <li><a href="Karik/HomePage.html">Karik</a></li>
+            <li><a href="vu/homepage.html">Vũ</a></li>
+            <li><a href="Vũ Cát Tường/page chính vũ cát tường.html">Vũ Cát Tường</a></li>
+    </ul>
+    </li>
+    </ul>
+    <form class="navbar-form navbar-left">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit" style="height:33.7px">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+         <ul class="nav navbar-nav navbar-right">
+          <li><a href="SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#" onclick="document.getElementById('id01').style.display='block'"><span class="glyphicon glyphicon-log-in"> Log-in</span></a></li>
+   <div id="id01" class="modal">
+  <form class="modal-content animate" action="btgrojec.html">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="avatar-female-icon-design-vector-png_118679 (1).jpg" alt="Avatar" class="avatar">
+    </div>
+    
+
+    <div class="container" id="nut">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+  </div>
+  </ul>
+</div>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div id="color" class="row">
+    <div class="col-sm-7">
+      <h2 align="center">SIGN UP FORM</h2>
+      <form name="formTest" action="btgrojec.html" onSubmit="return check();">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" ng-model="name" pattern="[a-zA-Z]{3,}" placeholder="Enter name" name="name" autofocus>
+      <span id="invalid" ng-show="formTest.name.$touched && formTest.name.$invalid">User name must be more than 3 character, not contain number and blank</span>
+    </div>
+    <div class="form-group">
+      <label for="name">Password:</label>
+      <input type="password" class="form-control" id="pass" ng-model="pass" pattern="[a-zA-Z0-9]{3,}" placeholder="Enter password" name="pass">
+      <span id="invalid" ng-show="formTest.pass.$touched && formTest.pass.$invalid">Password must be more than 3 character and not contain blank</span>
+    </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="num">Phone:</label>
+          <input type="tel" class="form-control" ng-model="num" pattern="[0-9]{8,12}" id="num" placeholder="Enter number" name="num">
+          <span id="invalid" ng-show="formTest.num.$touched && formTest.num.$invalid">Phone numbers should be between 8-12 numbers</span>
+        </div>
+   		<div class="form-group">
+          <label for="num">Address</label>
+          <input type="text" class="form-control" id="add" placeholder="Enter address" name="add">
+        </div><br>
+        	<div align="center">	
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="reset" class="btn btn-default">Reset</button>
+    </form>
+    </div>
+    </div>
+  <div class="col-sm-5">
+    <div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3761559090804!2d106.65705141530101!3d10.78247519231737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ecf24f42079%3A0x99561eafa2aaf4ab!2zMTY2IMSQ4bqldCBUaMOhbmgsIFBoxrDhu51uZyA2LCBUw6JuIELDrG5oLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1542078833472" height="400" width="400" frameborder="1" style="border:1" allowfullscreen></iframe>
+    </div>
+ 	</div>
+ 
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="contact.html">Contact</a>
+  </div>
+</body>
+</html>
